@@ -1,0 +1,11 @@
+{
+    "name": "xpad-crossfi-memecoin-launchpad",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "yarn workspace frontend dev"
+    },
+    "workspaces": [
+        "packages/*"
+    ]
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/oxk6owh.css");
+
+@layer utilities {
+    .font-variation-settings-square {
+        font-variation-settings: "BLOC" 1000, "OPEN" 1;
+    }
+    .font-variation-settings-loopy {
+        font-variation-settings: "LOOP" 1000;
+    }
+}
