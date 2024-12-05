@@ -10,7 +10,7 @@ const cards = [
 export const HowItWorks: FC = () => {
     return (
         <section className="pb-16 px-[140px]">
-            <h2 className="text-[32px] font-[32px] leading-[32px] font-littlebit-square font-variation-settings-square mb-12">
+            <h2 className="text-[32px] font-[32px] leading-[32px] font-square mb-12">
                 HOW IT WORKS?
             </h2>
             <div className="flex justify-between gap-5 ">
@@ -24,7 +24,7 @@ export const HowItWorks: FC = () => {
 
 const Card: FC<{ src: string; isCursor?: boolean }> = ({ src, isCursor }) => {
     return (
-        <div className="relative w-[374px] h-[289px] rounded-[20px]">
+        <div className="relative w-[374px] h-[289px] rounded-[20px] hover:scale-105 duration-75">
             <Image src={src} alt="card" fill />
             {isCursor && (
                 <Image

@@ -1,41 +1,95 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { FC } from "react";
 import { Carousel } from "src/components/Carousel";
 import { TokenCard } from "src/components/TokenCard";
 
-const cards = [
+export const cards = [
     {
         id: 1,
-        src: "/images/home/card-1.png",
+        image: {
+            src: "/images/home/card-1.png",
+            alt: "token-1",
+            size: 68,
+        },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
         marketCap: "41.2",
     },
     {
         id: 2,
-        src: "/images/home/card-2.png",
+        image: {
+            src: "/images/home/card-2.png",
+            alt: "token-2",
+            size: 68,
+        },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
         marketCap: "41.2",
     },
     {
         id: 3,
-        src: "/images/home/card-3.png",
+        image: {
+            src: "/images/home/card-3.png",
+            alt: "token-3",
+            size: 68,
+        },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
         marketCap: "41.2",
     },
     {
         id: 4,
-        src: "/images/home/card-4.png",
+        image: {
+            src: "/images/home/card-4.png",
+            alt: "token-4",
+            size: 68,
+        },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
         marketCap: "41.2",
     },
     {
         id: 5,
-        src: "/images/home/card-5.png",
+        image: {
+            src: "/images/home/card-5.png",
+            alt: "token-1",
+            size: 68,
+        },
+        tokenName: "Name of the token",
+        tokenCreator: "Creator",
+        marketCap: "41.2",
+    },
+    {
+        id: 6,
+        image: {
+            src: "/images/home/card-5.png",
+            alt: "token-1",
+            size: 52,
+        },
+        tokenName: "Name of the token",
+        tokenCreator: "Creator",
+        marketCap: "41.2",
+    },
+    {
+        id: 7,
+        image: {
+            src: "/images/home/card-2.png",
+            alt: "token-1",
+            size: 52,
+        },
+        tokenName: "Name of the token",
+        tokenCreator: "Creator",
+        marketCap: "41.2",
+    },
+    {
+        id: 7,
+        image: {
+            src: "/images/home/card-3.png",
+            alt: "token-1",
+            size: 52,
+        },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
         marketCap: "41.2",
@@ -56,9 +110,7 @@ export const RecentlyLaunched: FC = () => {
                     />
                 ))}
 
-                <h3 className="text-base leading-4 font-semibold tracking-medium">
-                    RECENTLY LAUNCHED
-                </h3>
+                <h3 className="heading-h3">RECENTLY LAUNCHED</h3>
                 {Array.from({ length: 8 }).map((_, i) => (
                     <Image
                         key={i}
@@ -72,7 +124,9 @@ export const RecentlyLaunched: FC = () => {
 
             <Carousel speed={20} gradient autoFill>
                 {cards.map((card, i) => (
-                    <TokenCard key={i} {...card} />
+                    <Link key={i} href={`/token/${card.id}`}>
+                        <TokenCard content {...card} />
+                    </Link>
                 ))}
             </Carousel>
         </section>

@@ -12,7 +12,7 @@ export const Footer: FC = () => {
                     width={39}
                     height={39}
                 />
-                <span className="font-inter text-xs font-semibold leading-3 text-gray tracking-wide">
+                <span className="font-inter text-xs font-semibold leading-3 text-black-60 tracking-wide">
                     XPAD 2024, all rights reserved
                 </span>
             </div>
@@ -37,12 +37,12 @@ export const Footer: FC = () => {
                 </div>
                 <div className="flex gap-6 items-center">
                     <Link href="/" className="flex">
-                        <span className="font-inter text-xs font-semibold leading-3 text-gray tracking-wide">
+                        <span className="font-inter text-xs font-semibold leading-3 text-black-60 tracking-wide">
                             Privacy policy
                         </span>
                     </Link>
                     <Link href="/" className="flex">
-                        <span className="font-inter text-xs font-semibold leading-3 text-gray tracking-wide">
+                        <span className="font-inter text-xs font-semibold leading-3 text-black-60 tracking-wide">
                             Terms of use
                         </span>
                     </Link>
