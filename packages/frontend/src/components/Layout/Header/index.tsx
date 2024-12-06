@@ -24,7 +24,7 @@ export const Header: FC = () => {
                     </Link>
                 </nav>
             </div>
-            <Button text="Enter Launchpad" />
+            <Button type="link" href="/launchpad" text="Enter Launchpad" />
         </header>
     );
 };
