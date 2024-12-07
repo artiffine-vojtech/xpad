@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { cn } from "src/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 const clouds = [
     {

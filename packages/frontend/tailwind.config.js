@@ -83,6 +83,7 @@ module.exports = {
             },
             letterSpacing: {
                 medium: "0.15px",
+                semiwide: "0.25px",
                 wide: "0.5px",
             },
             boxShadow: {

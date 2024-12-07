@@ -1,3 +1,4 @@
+import { ChevronSeparator } from "@/components/ChevronSeparator";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -100,26 +101,9 @@ export const RecentlyLaunched: FC = () => {
     return (
         <section className="pt-[108px] py-16">
             <div className="flex gap-[37px] items-center justify-center mb-4">
-                {Array.from({ length: 8 }).map((_, i) => (
-                    <Image
-                        key={i}
-                        src="/images/icons/chevron-down.svg"
-                        alt="chevron-down"
-                        width={24}
-                        height={24}
-                    />
-                ))}
-
+                <ChevronSeparator length={8} />
                 <h3 className="heading-h3">RECENTLY LAUNCHED</h3>
-                {Array.from({ length: 8 }).map((_, i) => (
-                    <Image
-                        key={i}
-                        src="/images/icons/chevron-down.svg"
-                        alt="chevron-down"
-                        width={24}
-                        height={24}
-                    />
-                ))}
+                <ChevronSeparator length={8} />
             </div>
 
             <Carousel speed={20} gradient autoFill>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ButtonHTMLAttributes, FC } from "react";
-import { cn } from "src/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 export type ButtonType = "button" | "link";
 
@@ -10,7 +10,7 @@ type CommonButtonProps<T> = {
     type: T;
     text: string;
     variant?: keyof typeof variants;
-    color?: "blue" | "purple";
+    color?: "blue" | "purple" | "lime" | "transparent";
 };
 
 type LinkButtonProps = {
@@ -29,6 +29,8 @@ const variants = {
     contained: {
         blue: "bg-sky-blue hover:bg-dark-blue hover:shadow-blue",
         purple: "bg-pure-purple hover:bg-dark-purple hover:shadow-purple",
+        transparent: "bg-transparent hover:bg-white-10 border border-black",
+        lime: "bg-lime hover:bg-dark-lime border border-black",
     },
     outlined: {
         blue: "bg-transparent shadow-sky-blue hover:bg-blue",
