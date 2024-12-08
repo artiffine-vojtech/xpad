@@ -30,7 +30,7 @@ export const AllTokensPage: FC = () => {
                     text="Search"
                 />
             </div>
-            <div className=" gap-10 pt-16 mx-[140px] flex">
+            <div className="flex gap-10 pt-16 mx-[140px]">
                 <TokensList />
                 <ActionLinks />
             </div>

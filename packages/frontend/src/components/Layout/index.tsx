@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Inter } from "next/font/google";
-import { cn } from "src/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
     subsets: ["latin"],

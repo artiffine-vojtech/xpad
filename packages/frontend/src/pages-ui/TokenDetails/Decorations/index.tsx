@@ -1,5 +1,3 @@
-import { TokenCard } from "@/components/TokenCard";
-import { cards } from "@/pages-ui/Home/Hero/RecentlyLaunched";
 import { FC } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -50,37 +48,7 @@ const clouds = [
 ];
 
 export const Decorations: FC = () => {
-    return (
-        <>
-            <TokenCard
-                {...cards[0]}
-                wrapperClassName="absolute top-0 left-[70px] m-0 p-4"
-            />
-
-            <TokenCard
-                {...cards[5]}
-                content={false}
-                wrapperClassName="absolute top-[260px] left-0 m-0 p-4"
-            />
-
-            <TokenCard
-                {...cards[6]}
-                content={false}
-                wrapperClassName="absolute top-[37px] right-[160px] m-0 p-4"
-            />
-
-            <TokenCard
-                {...cards[7]}
-                content={false}
-                wrapperClassName="absolute top-[182px] right-[30px] m-0 p-4"
-            />
-            {clouds.map((cloud, i) => (
-                <Image
-                    key={i}
-                    {...cloud}
-                    className={cn(cloud.className, "absolute")}
-                />
-            ))}
-        </>
-    );
+    return clouds.map((cloud, i) => (
+        <Image key={i} {...cloud} className={cn(cloud.className, "absolute")} />
+    ));
 };
