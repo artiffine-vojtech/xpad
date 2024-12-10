@@ -12,8 +12,16 @@
         font-variation-settings: "LOOP" 1000;
     }
 
+    .page-container {
+        @apply relative flex-1 pt-6 lg:pt-8 pb-16;
+    }
+
     .heading-h3 {
         @apply text-base leading-4 font-semibold tracking-medium;
+    }
+
+    .subheading {
+        @apply text-sm tracking-semiwide md:text-base font-normal md:tracking-wide;
     }
 
     .font-square {

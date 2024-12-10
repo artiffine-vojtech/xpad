@@ -9,7 +9,7 @@ import { Decorations } from "./Decorations";
 
 export const AllTokensPage: FC = () => {
     return (
-        <main className="relative flex-1 pt-8 pb-16">
+        <main className="page-container">
             <Decorations />
             <h1 className="text-[60px] leading-[60px] text-center font-square">
                 Search for token
@@ -30,7 +30,7 @@ export const AllTokensPage: FC = () => {
                     text="Search"
                 />
             </div>
-            <div className="flex gap-10 pt-16 mx-[140px]">
+            <div className="flex gap-10 pt-16 mx-5 2xl:mx-[140px]">
                 <TokensList />
                 <ActionLinks />
             </div>

@@ -8,9 +8,10 @@ export type ButtonType = "button" | "link";
 
 type CommonButtonProps<T> = {
     type: T;
-    text: string;
+    text?: string;
     variant?: keyof typeof variants;
     color?: "blue" | "purple" | "lime" | "transparent";
+    className?: string;
 };
 
 type LinkButtonProps = {
@@ -18,7 +19,7 @@ type LinkButtonProps = {
 };
 
 type NormalButtonProps = {
-    onClick: () => void;
+    onClick?: () => void;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type Props<T extends ButtonType> = T extends "link"
@@ -39,7 +40,14 @@ const variants = {
 };
 
 export const Button: FC<Props<ButtonType>> = (props) => {
-    const { type, text, variant = "outlined", color = "blue", ...rest } = props;
+    const {
+        type,
+        text,
+        variant = "outlined",
+        color = "blue",
+        className,
+        ...rest
+    } = props;
 
     if (type === "link") {
         return (
@@ -47,7 +55,8 @@ export const Button: FC<Props<ButtonType>> = (props) => {
                 <button
                     className={cn(
                         variants[variant][color],
-                        "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px]"
+                        "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
+                        className
                     )}
                     {...rest}
                 >
@@ -61,7 +70,8 @@ export const Button: FC<Props<ButtonType>> = (props) => {
         <button
             className={cn(
                 variants[variant][color],
-                "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px]"
+                "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
+                className
             )}
             {...rest}
         >

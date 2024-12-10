@@ -4,7 +4,7 @@ import { AnimatedImages } from "./AnimatedImages";
 
 export const Hero: FC = () => {
     return (
-        <section className="relative flex flex-col items-center pt-[180px] font-inter">
+        <section className="relative flex flex-col items-center pt-[180px] pb-[108px] font-inter">
             <AnimatedImages />
             <h1 className="text-[80px] leading-[68px] text-black mb-8">
                 <span className="font-square">

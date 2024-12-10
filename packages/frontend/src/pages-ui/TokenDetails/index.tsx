@@ -7,16 +7,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { TokenActions } from "./TokenActions";
 import { TokenStatistics } from "./TokenStatistics";
-import { cards } from "../Home/Hero/RecentlyLaunched";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { cards } from "@/components/HorizontalCarousel";
 
 export const TokenDetails: FC = () => {
     const { back } = useRouter();
     return (
-        <main className="relative flex-1 pt-8 pb-16">
+        <main className="page-container">
             <Decorations />
-            <div className="mx-[140px]">
+            <div className="mx-5 2xl:mx-[140px]">
                 <div className="flex justify-between">
                     <Button variant="link" className="p-0" onClick={back}>
                         <ArrowLeft width={20} height={20} />

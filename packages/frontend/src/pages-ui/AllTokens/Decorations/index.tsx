@@ -1,8 +1,8 @@
 import { TokenCard } from "@/components/TokenCard";
-import { cards } from "@/pages-ui/Home/Hero/RecentlyLaunched";
 import { FC } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { cards } from "@/components/HorizontalCarousel";
 
 const clouds = [
     {
