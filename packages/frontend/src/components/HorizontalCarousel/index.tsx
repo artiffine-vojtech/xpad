@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronSeparator } from "@/components/ChevronSeparator";
 import { breakpoints } from "@/utils/constants";
 import { useBreakpoint } from "@/utils/hooks/useBreakpoint";
