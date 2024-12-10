@@ -1,5 +1,8 @@
+"use client";
+
 import { ChevronSeparator } from "@/components/ChevronSeparator";
-import Image from "next/image";
+import { breakpoints } from "@/utils/constants";
+import { useBreakpoint } from "@/utils/hooks/useBreakpoint";
 import Link from "next/link";
 
 import { FC } from "react";
@@ -97,16 +100,20 @@ export const cards = [
     },
 ];
 
-export const RecentlyLaunched: FC = () => {
+export const HorizontalCarousel: FC = () => {
+    const isMobile = useBreakpoint(breakpoints["2xl"]);
+
     return (
-        <section className="pt-[108px] py-16">
+        <section className="overflow-hidden -mx-5 2xl:mx-unset">
             <div className="flex gap-[37px] items-center justify-center mb-4">
                 <ChevronSeparator length={8} />
-                <h3 className="heading-h3">RECENTLY LAUNCHED</h3>
+                <h3 className="heading-h3 whitespace-nowrap">
+                    RECENTLY LAUNCHED
+                </h3>
                 <ChevronSeparator length={8} />
             </div>
 
-            <Carousel speed={20} gradient autoFill>
+            <Carousel speed={20} gradient={!isMobile} autoFill>
                 {cards.map((card, i) => (
                     <Link key={i} href={`/token/${card.id}`}>
                         <TokenCard content {...card} />

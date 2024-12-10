@@ -81,6 +81,10 @@ module.exports = {
                     5: "hsl(var(--chart-5))",
                 },
             },
+            backgroundImage: {
+                deploy: "url('/images/tokens/deploy-btn.png')",
+                ["deploy-hover"]: "url('/images/tokens/deploy-btn-hover.png')",
+            },
             letterSpacing: {
                 medium: "0.15px",
                 semiwide: "0.25px",

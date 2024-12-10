@@ -4,8 +4,8 @@ import { FC } from "react";
 
 export const Footer: FC = () => {
     return (
-        <footer className="flex justify-between items-center py-10 border-t">
-            <div className="flex gap-6 items-center">
+        <footer className="flex flex-col gap-6 md:flex-row justify-between items-center py-10 border-t mx-5 2xl:mx-[140px]">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
                 <Image
                     src="/images/logo-footer.svg"
                     alt="logo-footer"

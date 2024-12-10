@@ -3,6 +3,7 @@ import { ArrowUpRight, File } from "lucide-react";
 import Image from "next/image";
 import { FC } from "react";
 import { ActionWrapper } from "./ActionWrapper";
+import Link from "next/link";
 
 const tokenOfTheDay = {
     id: 1,
@@ -30,17 +31,19 @@ export const ActionLinks: FC = () => {
                     textClassName="text-black"
                 />
             </ActionWrapper>
-            <ActionWrapper className="flex flex-col justify-between bg-red hover:bg-dark-red h-[289px]">
-                <ArrowUpRight
-                    width={24}
-                    height={24}
-                    color="white"
-                    className="ml-auto"
-                />
-                <span className="text-[32px] leading-[32px] font-square text-white">
-                    LAUNCH <br /> YOUR <br /> TOKEN
-                </span>
-            </ActionWrapper>
+            <Link href="/token-launcher">
+                <ActionWrapper className="flex flex-col justify-between bg-red hover:bg-dark-red h-[289px]">
+                    <ArrowUpRight
+                        width={24}
+                        height={24}
+                        color="white"
+                        className="ml-auto"
+                    />
+                    <span className="text-[32px] leading-[32px] font-square text-white">
+                        LAUNCH <br /> YOUR <br /> TOKEN
+                    </span>
+                </ActionWrapper>
+            </Link>
 
             <div className="flex gap-5">
                 <ActionWrapper className="flex justify-center items-center p-8  size-[95px] bg-[#26A4E3] hover:bg-[#1681B7]">

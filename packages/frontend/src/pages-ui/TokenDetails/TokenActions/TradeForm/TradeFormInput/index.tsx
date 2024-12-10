@@ -12,7 +12,7 @@ import Image from "next/image";
 export const TradeFormInput: FC = () => {
     return (
         <div className="flex gap-2.5 border-b border-black pb-3">
-            <Input className="p-0 h-7 !text-2xl rounded-none leading-7 text-black font-semibold border-none shadow-none outline-none focus-visible:ring-0 w-[172px]" />
+            <Input className="p-0 h-7 !text-2xl rounded-none leading-7 text-black font-semibold border-none shadow-none outline-none focus-visible:ring-0 w-[172px] bg-transparent" />
             <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2">
                     <Image
