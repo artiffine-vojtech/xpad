@@ -81,8 +81,10 @@ A utility contract that interacts with the `Factory` and `Router` to introduce a
 - There is market cap limit but It’s not enforced
 - Admin can stop trading, remove liquidity from xpad and deploy UniswapV2 pair in one tx.
 
-# Notes on quality
+# Future development of the code
 
 - Code should be thoroughly tested and evaluated.
-- There are some bugs and it could be written more concisely and efficiently, it’s not a great code rn.
+- There are some bugs and it could be written more concisely and efficiently.
+- Add more configurability over the bonding curve and liquidity deployment.
+- Use CrossFi native Dex instead of the custom Uniswap implementation.
 - It lacks access control, some functions should only be callable by XPad.sol
