@@ -14,7 +14,13 @@ export const Carousel: FC<PropsWithChildren<Props>> = ({
     autoFill,
 }) => {
     return (
-        <Marquee speed={speed} gradient={gradient} autoFill={autoFill}>
+        <Marquee
+            speed={speed}
+            gradient={gradient}
+            gradientColor="#f3f4f6"
+            gradientWidth={300}
+            autoFill={autoFill}
+        >
             {children}
         </Marquee>
     );

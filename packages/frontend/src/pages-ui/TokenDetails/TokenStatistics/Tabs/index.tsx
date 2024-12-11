@@ -6,22 +6,24 @@ import Image from "next/image";
 export const StatisticsTabs: FC = () => {
     return (
         <Tabs defaultValue="trades">
-            <TabsList className="flex justify-between w-full mb-8">
+            <TabsList className="flex flex-col lg:flex-row gap-6 items-start justify-between w-full mb-[100px] lg:mb-8">
                 <h2 className="flex-1 font-square text-black text-[32px] leading-8">
                     ACTIVITY
                 </h2>
-                <TabsTrigger
-                    value="chat"
-                    className="data-[state=active]:shadow-none data-[state=active]:bg-transparent "
-                >
-                    CHAT
-                </TabsTrigger>
-                <TabsTrigger
-                    value="trades"
-                    className="data-[state=active]:shadow-none data-[state=active]:bg-transparent "
-                >
-                    TRADES
-                </TabsTrigger>
+                <div>
+                    <TabsTrigger
+                        value="chat"
+                        className="data-[state=active]:shadow-none data-[state=active]:bg-transparent "
+                    >
+                        CHAT
+                    </TabsTrigger>
+                    <TabsTrigger
+                        value="trades"
+                        className="data-[state=active]:shadow-none data-[state=active]:bg-transparent "
+                    >
+                        TRADES
+                    </TabsTrigger>
+                </div>
             </TabsList>
             <TabsContent value="chat">
                 <div className="flex flex-col gap-16">

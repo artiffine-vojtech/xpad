@@ -15,7 +15,7 @@ type Props = {
 
 export const TradeFormInput: FC<Props> = ({ type }) => {
   return (
-    <div className="flex gap-2.5 border-b border-black pb-3">
+    <div className="flex justify-between gap-2.5 border-b border-black pb-3">
       <Input className="p-0 h-7 !text-2xl rounded-none leading-7 text-black font-semibold border-none shadow-none outline-none focus-visible:ring-0 w-[172px] bg-transparent" />
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center gap-2">
@@ -37,15 +37,15 @@ export const TradeFormInput: FC<Props> = ({ type }) => {
             />
           )}
           <span className="text-lg font-semibold">
+            {" "}
             {type === "toPay" ? "XFI" : "TOKEN"}
           </span>
           <ChevronDown className="w-5 h-5 text-black" />
         </DropdownMenuTrigger>
-
         {type === "toPay" && (
           <DropdownMenuContent className="mt-2 w-48 bg-white shadow-md rounded-md">
             <DropdownMenuItem>
-              <span className="text-sm font-medium">USDC</span>
+              <span className="text-sm font-medium">BTC</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <span className="text-sm font-medium">USDT</span>

@@ -73,8 +73,8 @@ const rows = [
 
 export const StaticticsTable: FC = () => {
     return (
-        <div className="flex flex-col gap-8">
-            <Table>
+        <div className="flex flex-col gap-8 -mr-5 sm:mr-0">
+            <Table className="min-w-[600px]">
                 <TableHeader>
                     <TableRow className="bg-purple pointer-events-none border-none">
                         <TableHead className="rounded-tl-xl rounded-bl-xl text-center">

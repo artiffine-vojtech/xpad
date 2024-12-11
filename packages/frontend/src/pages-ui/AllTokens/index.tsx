@@ -11,15 +11,15 @@ export const AllTokensPage: FC = () => {
     return (
         <main className="page-container">
             <Decorations />
-            <h1 className="text-[60px] leading-[60px] text-center font-square">
+            <h1 className="relative text-[40px] leading-[40px] md:text-[60px] md:leading-[60px] text-center font-square z-50">
                 Search for token
             </h1>
             <p className="heading-h3 text-center mt-8 mb-12">
                 OR DON'T, WHATEVER
             </p>
-            <div className="flex justify-center gap-2">
+            <div className="flex flex-col md:flex-row justify-center gap-2 px-5">
                 <Input
-                    className="w-[463px]"
+                    className="md:w-[463px]"
                     placeholder="Search by token name, ticker or address"
                 />
                 <Button
@@ -30,7 +30,7 @@ export const AllTokensPage: FC = () => {
                     text="Search"
                 />
             </div>
-            <div className="flex gap-10 pt-16 mx-5 2xl:mx-[140px]">
+            <div className="flex flex-col md:flex-row gap-16 lg:gap-10 pt-16 mx-5 2xl:mx-[140px]">
                 <TokensList />
                 <ActionLinks />
             </div>
