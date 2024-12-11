@@ -31,7 +31,7 @@ export const ActionLinks: FC = () => {
                     textClassName="text-black"
                 />
             </ActionWrapper>
-            <Link href="/token-launcher">
+            <Link href="/token-launcher" className="hidden sm:block">
                 <ActionWrapper className="flex flex-col justify-between bg-red hover:bg-dark-red h-[289px]">
                     <ArrowUpRight
                         width={24}
@@ -45,7 +45,7 @@ export const ActionLinks: FC = () => {
                 </ActionWrapper>
             </Link>
 
-            <div className="flex gap-5">
+            <div className="flex gap-5 justify-between">
                 <ActionWrapper className="flex justify-center items-center p-8  size-[95px] bg-[#26A4E3] hover:bg-[#1681B7]">
                     <Image
                         src="/images/icons/telegram-white.svg"

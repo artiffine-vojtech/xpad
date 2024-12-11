@@ -70,7 +70,7 @@ export const cards = [
         image: {
             src: "/images/home/card-5.png",
             alt: "token-1",
-            size: 52,
+            size: 68,
         },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
@@ -81,7 +81,7 @@ export const cards = [
         image: {
             src: "/images/home/card-2.png",
             alt: "token-1",
-            size: 52,
+            size: 68,
         },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
@@ -92,7 +92,7 @@ export const cards = [
         image: {
             src: "/images/home/card-3.png",
             alt: "token-1",
-            size: 52,
+            size: 68,
         },
         tokenName: "Name of the token",
         tokenCreator: "Creator",
@@ -104,7 +104,7 @@ export const HorizontalCarousel: FC = () => {
     const isMobile = useBreakpoint(breakpoints["2xl"]);
 
     return (
-        <section className="overflow-hidden -mx-5 2xl:mx-unset">
+        <section className="overflow-hidden">
             <div className="flex gap-[37px] items-center justify-center mb-4">
                 <ChevronSeparator length={8} />
                 <h3 className="heading-h3 whitespace-nowrap">

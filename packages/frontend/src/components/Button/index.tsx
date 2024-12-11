@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "@/lib/utils";
 
 export type ButtonType = "button" | "link";
@@ -12,6 +12,7 @@ type CommonButtonProps<T> = {
     variant?: keyof typeof variants;
     color?: "blue" | "purple" | "lime" | "transparent";
     className?: string;
+    icon?: ReactElement;
 };
 
 type LinkButtonProps = {
@@ -46,21 +47,23 @@ export const Button: FC<Props<ButtonType>> = (props) => {
         variant = "outlined",
         color = "blue",
         className,
+        icon,
         ...rest
     } = props;
 
     if (type === "link") {
         return (
-            <Link href={props.href}>
+            <Link href={props.href} className="z-10">
                 <button
                     className={cn(
                         variants[variant][color],
-                        "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
+                        "flex font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
                         className
                     )}
                     {...rest}
                 >
-                    {text}
+                    <span>{text}</span>
+                    {icon && icon}
                 </button>
             </Link>
         );
@@ -70,12 +73,13 @@ export const Button: FC<Props<ButtonType>> = (props) => {
         <button
             className={cn(
                 variants[variant][color],
-                "font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
+                "flex items-center gap-2.5 font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300 z-10",
                 className
             )}
             {...rest}
         >
-            {text}
+            <span>{text}</span>
+            {icon && icon}
         </button>
     );
 };

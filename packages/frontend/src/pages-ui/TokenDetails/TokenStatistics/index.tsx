@@ -10,7 +10,7 @@ export const TokenStatistics: FC = () => {
                 alt="graph"
                 width={793}
                 height={470}
-                className="z-10"
+                className="hidden lg:block z-10"
             />
             <StatisticsTabs />
         </section>

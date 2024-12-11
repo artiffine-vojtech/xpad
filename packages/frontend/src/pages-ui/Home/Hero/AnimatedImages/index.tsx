@@ -82,3 +82,55 @@ export const AnimatedImages: FC = () => {
         </>
     );
 };
+
+const cloudsMobile = [
+    {
+        src: "/images/home/cloud-7-mobile.png",
+        alt: "cloud-7",
+        width: 116,
+        height: 135,
+        className: "left-0 top-[64px]",
+    },
+    {
+        src: "/images/home/cloud-8-mobile.png",
+        alt: "cloud-8",
+        width: 116,
+        height: 135,
+        className: "right-0 top-[115px]",
+    },
+    {
+        src: "/images/home/cloud-9-mobile.png",
+        alt: "cloud-7",
+        width: 200,
+        height: 135,
+        className: "right-0 bottom-9 z-10",
+    },
+    {
+        src: "/images/home/cloud-10-mobile.png",
+        alt: "cloud-7",
+        width: 116,
+        height: 135,
+        className: "left-0 bottom-20",
+    },
+    {
+        src: "/images/home/pepe-2.svg",
+        alt: "pepe-2",
+        width: 95,
+        height: 124,
+        className: "right-[20px] bottom-[130px] animate-upAndDown delay-300",
+    },
+];
+
+export const AnimatedImagesMobile: FC = () => {
+    return (
+        <>
+            {cloudsMobile.map((cloud, i) => (
+                <Image
+                    key={i}
+                    {...cloud}
+                    className={cn(cloud.className, "absolute")}
+                />
+            ))}
+        </>
+    );
+};

@@ -22,7 +22,7 @@ export const TokenDetails: FC = () => {
                         <ArrowLeft width={20} height={20} />
                         <span>Back</span>
                     </Button>
-                    <div className="flex gap-6">
+                    <div className="hidden md:flex gap-6">
                         <Image
                             src="/images/home/card-2.png"
                             alt="card"
@@ -47,7 +47,7 @@ export const TokenDetails: FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-10 pt-16 ">
+                <div className="flex flex-col lg:flex-row gap-10 pt-16 ">
                     <TokenActions />
                     <TokenStatistics />
                 </div>
