@@ -11,7 +11,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
-import { Button } from "../Button";
+import { ConnectWallet } from "../ConnectWallet";
 
 export const SideBar: FC = () => {
     const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ export const SideBar: FC = () => {
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-8 py-16 px-6">
                 <SheetTitle>Menu</SheetTitle>
-                <Button type="link" href="/launchpad" text="Enter Launchpad" />
+                <ConnectWallet sidebar />
 
                 <nav className="flex flex-col gap-6 font-inter text-black font-semibold text-base leading-4 tracking-medium">
                     <Link href="/">

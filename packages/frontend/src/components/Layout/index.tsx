@@ -3,6 +3,8 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { ThirdwebProvider } from "thirdweb/react";
+import ThirdWebAutoConnect from "@/containers/ThirdWebAutoConnect";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -20,9 +22,12 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
                     "flex flex-col min-h-screen max-w-[1440px] mx-auto"
                 )}
             >
-                <Header />
-                {children}
-                <Footer />
+                <ThirdwebProvider>
+                    <ThirdWebAutoConnect />
+                    <Header />
+                    {children}
+                    <Footer />
+                </ThirdwebProvider>
             </div>
         </div>
     );
