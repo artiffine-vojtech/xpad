@@ -1,17 +1,17 @@
 {
-  "name": "xpad",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "yarn workspace frontend dev"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/hardhat",
-      "**/hardhat/**"
-    ]
-  }
+    "name": "xpad",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "yarn workspace @xpad/frontend dev"
+    },
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/hardhat",
+            "**/hardhat/**"
+        ]
+    }
 }
