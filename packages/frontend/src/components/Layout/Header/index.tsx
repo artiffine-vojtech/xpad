@@ -5,16 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SideBar } from "@/components/SideBar";
-import { Button } from "src/components/Button";
-import { usePathname } from "next/navigation";
-import { Server } from "lucide-react";
+import { ConnectWallet } from "@/components/ConnectWallet";
+import { useBreakpoint } from "@/utils/hooks/useBreakpoint";
+import { breakpoints } from "@/utils/constants";
 
 export const Header: FC = () => {
-    const pathname = usePathname();
-
+    const isMobile = useBreakpoint(breakpoints.md);
     return (
         <header className="flex justify-between p-6 2xl:px-[140px] md:py-12">
-            <div className="flex items-center gap-24">
+            <div className="flex items-center gap-8 lg:gap-24">
                 <Link href="/">
                     <Image
                         src="/images/logo.png"
@@ -23,7 +22,7 @@ export const Header: FC = () => {
                         height={41}
                     />
                 </Link>
-                <nav className="hidden md:flex gap-16 font-inter text-black font-semibold text-base leading-4 tracking-medium">
+                <nav className="hidden md:flex gap-6 lg:gap-16 font-inter text-black font-semibold text-base leading-4 tracking-medium">
                     <Link href="/">
                         <span>How It Works?</span>
                     </Link>
@@ -32,24 +31,7 @@ export const Header: FC = () => {
                     </Link>
                 </nav>
             </div>
-            {pathname === "/" ? (
-                <Button
-                    type="link"
-                    href="/launchpad"
-                    text="Enter Launchpad"
-                    className="hidden md:block"
-                />
-            ) : (
-                <Button
-                    type="button"
-                    variant="contained"
-                    color="blue"
-                    text="Connect wallet"
-                    className="hidden md:flex"
-                    icon={<Server />}
-                />
-            )}
-            <SideBar />
+            {isMobile ? <SideBar /> : <ConnectWallet />}
         </header>
     );
 };

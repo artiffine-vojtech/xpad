@@ -27,6 +27,15 @@
     .font-square {
         @apply font-littlebit-square font-variation-settings-square;
     }
+
+    .connect-wallet-btn {
+        @apply duration-300;
+
+        button.tw-connected-wallet,
+        button {
+            @apply flex items-center gap-2.5 font-inter text-base text-black font-semibold leading-4 tracking-medium px-5 py-[14px] rounded-[100px] duration-300 bg-sky-blue hover:bg-dark-blue hover:shadow-blue;
+        }
+    }
 }
 
 @layer base {

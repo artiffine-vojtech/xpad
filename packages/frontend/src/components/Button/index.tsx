@@ -58,6 +58,7 @@ export const Button: FC<Props<ButtonType>> = (props) => {
                     className={cn(
                         variants[variant][color],
                         "flex font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300",
+                        icon && "py-[14px]",
                         className
                     )}
                     {...rest}
@@ -74,6 +75,7 @@ export const Button: FC<Props<ButtonType>> = (props) => {
             className={cn(
                 variants[variant][color],
                 "flex items-center gap-2.5 font-inter text-base font-semibold leading-4 tracking-medium px-5 py-4 rounded-[100px] duration-300 z-10",
+                icon && "py-[14px]",
                 className
             )}
             {...rest}
