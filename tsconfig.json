@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "\u0000",
+    "paths": {
+      "@xpad/hardhat-types": ["../../hardhat-types/src"],
+      "@xpad/hardhat-types/*": ["../../hardhat-types/src/*"]
+    }
+  }
+}
