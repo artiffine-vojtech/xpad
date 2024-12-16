@@ -6,6 +6,10 @@ export const breakpoints = {
     "2xl": 1536,
 } as const;
 
+export const MAX_FILE_SIZE = 2 * 1024 * 1024;
+
+export const allowedFormats = ["image/jpeg", "image/png", "image/svg"];
+
 export const clouds = [
     {
         src: "/images/tokens/cloud-gray-1.png",
