@@ -2,8 +2,10 @@ import { Layout } from "src/components/Layout";
 import "../styles/globals.css";
 
 export const metadata = {
-    title: "My App",
-    description: "This is my Next.js app with TailwindCSS.",
+    title: "XPAD - Launch your token today",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({
