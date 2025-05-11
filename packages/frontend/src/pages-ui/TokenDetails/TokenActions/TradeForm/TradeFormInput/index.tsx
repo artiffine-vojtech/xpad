@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { NATIVE_TOKEN_SYMBOL } from "@/utils/chains";
+import { publicImages } from "@/static";
 
 type Props = {
   type: "toPay" | "toReceive";
@@ -21,8 +23,8 @@ export const TradeFormInput: FC<Props> = ({ type }) => {
         <DropdownMenuTrigger className="flex items-center gap-2">
           {type === "toPay" ? (
             <Image
-              src="/images/icons/XFI.png"
-              alt="XFI"
+              src={publicImages.getTokenIcon(NATIVE_TOKEN_SYMBOL)}
+              alt={NATIVE_TOKEN_SYMBOL}
               width={24}
               height={24}
               className="rounded-full"
@@ -38,7 +40,7 @@ export const TradeFormInput: FC<Props> = ({ type }) => {
           )}
           <span className="text-lg font-semibold">
             {" "}
-            {type === "toPay" ? "XFI" : "TOKEN"}
+            {type === "toPay" ? NATIVE_TOKEN_SYMBOL : "TOKEN"}
           </span>
           <ChevronDown className="w-5 h-5 text-black" />
         </DropdownMenuTrigger>

@@ -12,12 +12,19 @@
     "read:crossfitestnet": "npx hardhat run scripts/read.ts --network crossfitestnet",
     "write:crossfitestnet": "npx hardhat run scripts/write.ts --network crossfitestnet",
     "deploy:localhost": "npx hardhat run scripts/deploy.ts --network localhost",
-    "deploy:crossfitestnet": "npx hardhat run scripts/deploy.ts --network crossfitestnet"
+    "deploy:crossfitestnet": "npx hardhat run scripts/deploy.ts --network crossfitestnet",
+    "deploy:juchain": "npx hardhat run scripts/deploy.ts --network juchain",
+    "deploy:juchaintestnet": "npx hardhat run scripts/deploy.ts --network juchaintestnet",
+    "etherscan:verify:crossfi": "npx hardhat run scripts/etherscanVerify.ts --network crossfi",
+    "etherscan:verify:crossfitestnet": "npx hardhat run scripts/etherscanVerify.ts --network crossfitestnet",
+    "etherscan:verify:juchain": "npx hardhat run scripts/etherscanVerify.ts --network juchain",
+    "etherscan:verify:juchaintestnet": "npx hardhat run scripts/etherscanVerify.ts --network juchaintestnet"
   },
   "devDependencies": {
     "@ethersproject/hardware-wallets": "^5.7.0",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
     "@nomiclabs/hardhat-waffle": "^2.0.5",
     "@openzeppelin/contracts": "^5.0.2",
     "@typechain/ethers-v5": "^10.2.1",
