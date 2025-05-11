@@ -5,6 +5,7 @@ import { FC } from "react";
 
 import { TradeFormInput } from "./TradeFormInput";
 import { ChevronSeparator } from "@/components/ChevronSeparator";
+import { NATIVE_TOKEN_SYMBOL } from "@/utils/chains";
 
 export const TradeForm: FC = () => {
   return (
@@ -31,7 +32,8 @@ export const TradeForm: FC = () => {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col">
           <span className="text-xs leading-3 tracking-wide text-black-70 font-semibold mb-2.5">
-            Available: <span className="text-black">234.23321 XFI</span>
+            Available:{" "}
+            <span className="text-black">234.23321 {NATIVE_TOKEN_SYMBOL}</span>
           </span>
           <TradeFormInput type="toPay" />
           <div className="flex gap-1 py-8">

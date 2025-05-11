@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn workspace frontend dev"
+    "dev": "yarn workspace @xpad/frontend dev"
   },
   "workspaces": {
     "packages": [
@@ -13,5 +13,6 @@
       "**/hardhat",
       "**/hardhat/**"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

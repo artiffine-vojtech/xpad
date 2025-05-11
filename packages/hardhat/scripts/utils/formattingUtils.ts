@@ -3,12 +3,18 @@ import { formatEther, parseUnits } from "@ethersproject/units";
 
 const getCurrencyByChainId = (chainId: number) => {
   switch (chainId) {
+    // Polygon
     case 137:
     case 80001:
       return "MATIC";
+    // Crossfi
     case 4157:
     case 4158:
       return "XFI";
+    // JuChain
+    case 210000:
+    case 202599:
+      return "JU";
     default:
       return "ETH";
   }
@@ -21,7 +27,7 @@ export const formatPriceByChain = (
 
 export const formatPrice = (
   value: BigNumberish | number | undefined,
-  unit: "ETH" | "MATIC" | "XFI" = "ETH"
+  unit: "ETH" | "MATIC" | "XFI" | "JU" = "ETH"
 ) => {
   if (value === undefined) {
     return `? ${unit}`;

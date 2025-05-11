@@ -1,6 +1,8 @@
 import localhostConfig from "./localhost";
 import crossfiTestnetConfig from "./crossfiTestnet";
 import crossfiConfig from "./crossfi";
+import juchainTestnetConfig from "./juchainTestnet";
+import juchainConfig from "./juchain";
 
 import {
   erc20Sol,
@@ -37,6 +39,8 @@ enum ChainId {
   Localhost = 1337,
   CrossFiTestnet = 4157,
   CrossFi = 4158,
+  Juchain = 210000,
+  JuchainTestnet = 202599,
 }
 
 export const getConfigByChainId = (chainId: ChainId) => {
@@ -45,6 +49,10 @@ export const getConfigByChainId = (chainId: ChainId) => {
       return crossfiConfig;
     case ChainId.CrossFiTestnet:
       return crossfiTestnetConfig;
+    case ChainId.Juchain:
+      return juchainConfig;
+    case ChainId.JuchainTestnet:
+      return juchainTestnetConfig;
     case ChainId.Localhost:
       return localhostConfig;
     default:

@@ -5,8 +5,7 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import { task } from "hardhat/config";
 import { HardhatUserConfig } from "hardhat/types";
-// TODO yarn add -D @nomiclabs/hardhat-etherscan
-// import '@nomiclabs/hardhat-etherscan'
+import "@nomiclabs/hardhat-etherscan";
 
 import { config as envConfig } from "./.env/vars";
 
@@ -27,6 +26,7 @@ task("tasksOnInit", "Delete localContractAddress.ts", async (_args, hre) => {
 // Go to https://hardhat.org/config/ to learn more
 const config: HardhatUserConfig & {
   typechain: {};
+  etherscan: {};
 } = {
   solidity: {
     compilers: [
@@ -61,9 +61,45 @@ const config: HardhatUserConfig & {
       url: `https://rpc.testnet.ms`,
       accounts: [`0x${envConfig.CROSSFI_TESTNET_PRIVATE_KEY}`],
     },
+    juchain: {
+      url: `https://rpc.juchain.org`,
+      accounts: [`0x${envConfig.JU_CHAIN_PRIVATE_KEY}`],
+    },
+    juchaintestnet: {
+      url: `https://testnet-rpc.juchain.org`,
+      accounts: [`0x${envConfig.JU_CHAIN_TESTNET_PRIVATE_KEY}`],
+    },
   },
   typechain: {
     outDir: "../hardhat-types/src",
+  },
+  etherscan: {
+    // Currently, Juscan does not require an API Key, so this value is sufficient.
+    // If Juscan's policy changes in the future and requires an API Key, please consult their official documentation.
+    apiKey: {
+      juchaintestnet: "JUSCAN_NO_API_KEY_REQUIRED",
+      juchain: "JUSCAN_NO_API_KEY_REQUIRED",
+    },
+    // Custom configuration for blockchains compatible with the Etherscan API
+    customChains: [
+      {
+        network: "juchaintestnet",
+        chainId: 202599,
+        urls: {
+          apiURL: "https://testnet.juscan.io/api",
+          browserURL: "https://testnet.juscan.io",
+        },
+      },
+      {
+        network: "juchain",
+        chainId: 210000,
+        urls: {
+          apiURL: "https://juscan.io/api",
+          browserURL: "https://juscan.io",
+        },
+      },
+      // ... other custom chains
+    ],
   },
 };
 
